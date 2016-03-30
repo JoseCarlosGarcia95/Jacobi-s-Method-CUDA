@@ -144,15 +144,13 @@ Error:
 int main()
 {
 	unsigned int matrixSize = 1000, i, j;
-	float *x0,*b, **test, **test2;
+	float *x0,*b, **test;
 	// Allocate memory for CPU.
 	test = (float**)malloc(sizeof(float*)*matrixSize);
-	test2 = (float**)malloc(sizeof(float*)*matrixSize);
 	b = (float*)malloc(sizeof(float)*matrixSize);
 	x0 = (float*)malloc(sizeof(float)*matrixSize);
 	for (i = 0; i < matrixSize; i++) {
 		test[i] = (float*)calloc(matrixSize, sizeof(float));
-		test2[i] = (float*)calloc(matrixSize, sizeof(float));
 
 		// ONLY FOR TESTING PURPOSE.
 		test[i][i] = 2;
